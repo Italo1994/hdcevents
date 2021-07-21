@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title', 'HDC Events')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/style.css">
+@section('content')
 
-        <!-- Styles -->
-        
-    </head>
-    <body class="antialiased">
         <h1>Welcome to homepage</h1>
         <a href="/contato">Contato</a>
+
+        <img src="/img/banner.jpeg"/ alt="banner">
 
         @if($nome == "Italo")
             <p> {{$nome}} tem {{$idade}} anos e trabalha como {{$profissao}} na emprega Google. </p>
@@ -39,5 +31,5 @@
             <p> {{$loop->index}} </p>
             <p> {{$nome}} </p>
         @endforeach
-    </body>
-</html>
+
+@endsection
