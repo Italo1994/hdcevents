@@ -36,3 +36,15 @@ Route::get('/', function () {
 Route::get('/contato', function() {
     return view('contact');
 });
+
+Route::get('/produtos', function() {
+    return view('products');
+});
+
+Route::get('/produtos_teste/{id}', function($id) {
+    return view('product', 
+                    [
+                        'id' => $id
+                    ]
+                );
+});
