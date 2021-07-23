@@ -4,6 +4,10 @@
 
 @section('content')
 
-    <p>Exibindo produto id: {{$id}} </p>
+    @if($id != null)
+        <p>Exibindo produto id: {{$id}} </p>
+    @else
+        <p>Produto não encontrado</p>
+    @endif
 
 @endsection
